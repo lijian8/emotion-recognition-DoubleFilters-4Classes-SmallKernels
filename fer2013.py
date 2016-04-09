@@ -224,7 +224,7 @@ def inference(images):
   with tf.variable_scope('local3') as scope:
     # Move everything into depth so we can perform a single matrix multiply.
     dim = 1
-    for d in pool1.get_shape()[1:].as_list():
+    for d in pool2.get_shape()[1:].as_list():
       dim *= d
     reshape = tf.reshape(pool2, [FLAGS.batch_input_size, dim])
 
