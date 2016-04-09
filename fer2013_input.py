@@ -13,7 +13,8 @@ import tensorflow as tf
 IMAGE_SIZE = 32
 
 # Global constants describing the FER2013 data set.
-NUM_CLASSES = 7 # (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral) #10
+# NUM_CLASSES = 7 # (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral) #10
+NUM_CLASSES = 4 # (0=Angry, 1=Fear, 2=Happy, 3=Sad) #10
 NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN = 28709 # The training set #50000
 NUM_EXAMPLES_PER_EPOCH_FOR_EVAL = 3589 # The public test set #10000
 

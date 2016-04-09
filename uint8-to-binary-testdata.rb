@@ -10,8 +10,8 @@ class Integer
 end
 
 DATA_SET_UINT8 = "fer2013.csv"
-DATA_SET_BIN   = "fer2013.bin"
-# DATA_SET_BIN   = "test_batch.bin" # Test data
+# DATA_SET_BIN   = "fer2013.bin"
+DATA_SET_BIN   = "test_batch.bin" # Test data
 
 
 puts "Reading csv ..."
@@ -25,8 +25,8 @@ File.open(DATA_SET_BIN, 'wb') do |output|
     usage   = row["Usage"]
 
 
-    if usage == 'Training'
-    # if usage == 'PublicTest' # Test data
+    # if usage == 'Training'
+    if usage == 'PublicTest' # Test data
       actual_emotion = emotion
 
       if emotion == '0' || emotion == '1'
@@ -54,7 +54,7 @@ File.open(DATA_SET_BIN, 'wb') do |output|
 
       ctr += 1
     else
-      break
+      next
     end
 
   end
